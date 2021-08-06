@@ -1,0 +1,10 @@
+C:\Users\Steph\source\repos\NutritionCalculator\bin\Debug\NutritionCalculator.exe.config
+C:\Users\Steph\source\repos\NutritionCalculator\bin\Debug\NutritionCalculator.exe
+C:\Users\Steph\source\repos\NutritionCalculator\bin\Debug\NutritionCalculator.pdb
+C:\Users\Steph\source\repos\NutritionCalculator\obj\Debug\NutritionCalculator.csprojAssemblyReference.cache
+C:\Users\Steph\source\repos\NutritionCalculator\obj\Debug\NutritionCalculator.NutritionCalculator.resources
+C:\Users\Steph\source\repos\NutritionCalculator\obj\Debug\NutritionCalculator.Properties.Resources.resources
+C:\Users\Steph\source\repos\NutritionCalculator\obj\Debug\NutritionCalculator.csproj.GenerateResource.cache
+C:\Users\Steph\source\repos\NutritionCalculator\obj\Debug\NutritionCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Steph\source\repos\NutritionCalculator\obj\Debug\NutritionCalculator.exe
+C:\Users\Steph\source\repos\NutritionCalculator\obj\Debug\NutritionCalculator.pdb
