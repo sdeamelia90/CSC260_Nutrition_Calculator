@@ -8,13 +8,6 @@ namespace NutritionCalculator
 {
     class Beverage: INutritionFacts
     {
-        public int TOTALFAT = 0;
-        public int SATURATEDFAT = 0;
-        public int TRANSFAT = 0;
-        public int CHOLESTEROL = 0;
-        public int DIETARYFIBER = 0;
-        public int PROTEIN = 0;
-        
         public Beverage(int calories, int sodium, int totalCarbohydrates, int sugars)
         {
             this.Calories = calories;
@@ -23,6 +16,17 @@ namespace NutritionCalculator
             this.Sugars = sugars;
         }
 
+        #region default values
+        // default 0 because none of the beverages contain these macros
+        public int TOTALFAT = 0;
+        public int SATURATEDFAT = 0;
+        public int TRANSFAT = 0;
+        public int CHOLESTEROL = 0;
+        public int DIETARYFIBER = 0;
+        public int PROTEIN = 0;
+        #endregion
+
+        #region Properties
         public int Calories { get; set; }
         public int TotalFat { get; set; }
         public int SaturatedFat { get; set; }
@@ -33,7 +37,10 @@ namespace NutritionCalculator
         public int DietaryFiber { get; set; }
         public int Sugars { get; set; }
         public int Protein { get; set; }
+        #endregion
 
+        #region MacroMethods
+        //returns the specified macro for the specified instance
         public int GetCalories() {
             return this.Calories;
         }
@@ -73,6 +80,7 @@ namespace NutritionCalculator
         {
             return this.PROTEIN;
         }
+        #endregion
     }
 
 

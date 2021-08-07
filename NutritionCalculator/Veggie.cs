@@ -6,32 +6,24 @@ using System.Threading.Tasks;
 
 namespace NutritionCalculator
 {
-    public class Taco : INutritionFacts
+    class Veggie: INutritionFacts
     {
-        //initialize list of Ingredient objects.
+        //implements list of Ingredient objects
         List<Ingredient> ingredientList = new List<Ingredient>();
 
         #region Constructors
-        public Taco(Ingredient ingred1, Ingredient ingred2, Ingredient ingred3, Ingredient ingred4)
+        public Veggie(Ingredient ingred1)
+        {
+            ingredientList.Add(ingred1);
+        }
+        public Veggie(Ingredient ingred1, Ingredient ingred2)
         {
             ingredientList.Add(ingred1);
             ingredientList.Add(ingred2);
-            ingredientList.Add(ingred3);
-            ingredientList.Add(ingred4);
         }
-        public Taco(Ingredient ingred1, Ingredient ingred2, Ingredient ingred3, Ingredient ingred4, Ingredient ingred5, Ingredient ingred6)
-        {
-            ingredientList.Add(ingred1);
-            ingredientList.Add(ingred2);
-            ingredientList.Add(ingred3);
-            ingredientList.Add(ingred4);
-            ingredientList.Add(ingred5);
-            ingredientList.Add(ingred6);
-        }
-
         #endregion
 
-        #region Properties
+        #region properties
         public int Calories { get; set; }
         public int TotalFat { get; set; }
         public int SaturatedFat { get; set; }
@@ -44,10 +36,11 @@ namespace NutritionCalculator
         public int Protein { get; set; }
         #endregion
 
-        #region NutritionFactsMethods
-        //returns the total nutritional facts for each macro for all ingredients in the taco
-        public int GetCalories() {
-            foreach (Ingredient ingred in ingredientList) {
+        #region MacroMethods
+        public int GetCalories()
+        {
+            foreach (Ingredient ingred in ingredientList)
+            {
                 Calories = Calories + ingred.GetCalories();
             }
             return Calories;

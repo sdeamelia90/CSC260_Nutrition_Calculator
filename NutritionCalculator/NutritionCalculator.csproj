@@ -58,6 +58,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Taco.cs" />
+    <Compile Include="Veggie.cs" />
     <EmbeddedResource Include="NutritionCalculator.resx">
       <DependentUpon>NutritionCalculator.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,6 +8,8 @@ namespace NutritionCalculator
 {
     interface INutritionFacts
     {
+
+        #region Properties
         int Calories { get; set; }
         int TotalFat { get; set; }
         int SaturatedFat { get; set; }
@@ -18,7 +20,9 @@ namespace NutritionCalculator
         int DietaryFiber { get; set; }
         int Sugars { get; set; }
         int Protein { get; set; }
+        #endregion
 
+        #region methods
         int GetCalories();
         int GetTotalFat();
         int GetSaturatedFat();
@@ -29,11 +33,7 @@ namespace NutritionCalculator
         int GetDietaryFiber();
         int GetSugars();
         int GetProtein();
-
-
-
+        #endregion
 
     }
-
-
 }

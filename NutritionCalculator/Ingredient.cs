@@ -21,8 +21,6 @@ namespace NutritionCalculator
             this.Protein = protein;
         }
 
-
-
         #region MacroProperties
         public int Calories { get; set; }
         public int TotalFat { get; set; }
