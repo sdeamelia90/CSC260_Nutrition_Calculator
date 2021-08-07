@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace NutritionCalculator
 {
-    public class Taco: INutritionFacts
+    public class Taco : INutritionFacts
     {
         List<Ingredient> ingredientList = new List<Ingredient>();
+
+        public Taco()
+        {
+
+        }
+
 
         public Taco(Ingredient ingred1, Ingredient ingred2, Ingredient ingred3, Ingredient ingred4)
         {
@@ -17,14 +23,16 @@ namespace NutritionCalculator
             ingredientList.Add(ingred3);
             ingredientList.Add(ingred4);
         }
-        public Taco(Ingredient ingred1, Ingredient ingred2, Ingredient ingred3, Ingredient ingred4, Ingredient ingred5)
+        public Taco(Ingredient ingred1, Ingredient ingred2, Ingredient ingred3, Ingredient ingred4, Ingredient ingred5, Ingredient ingred6)
         {
             ingredientList.Add(ingred1);
             ingredientList.Add(ingred2);
             ingredientList.Add(ingred3);
             ingredientList.Add(ingred4);
             ingredientList.Add(ingred5);
+            ingredientList.Add(ingred6);
         }
+
         public int Calories { get; set; }
         public int TotalFat { get; set; }
         public int SaturatedFat { get; set; }
@@ -36,7 +44,7 @@ namespace NutritionCalculator
         public int Sugars { get; set; }
         public int Protein { get; set; }
 
-        public int GetCalories(){
+        public int GetCalories() {
             foreach (Ingredient ingred in ingredientList) {
                 Calories = Calories + ingred.GetCalories();
             }
@@ -49,7 +57,7 @@ namespace NutritionCalculator
             {
                 TotalFat = TotalFat + ingred.GetTotalFat();
             }
-            return Calories;
+            return TotalFat;
         }
 
         public int GetSaturatedFat()
@@ -116,6 +124,5 @@ namespace NutritionCalculator
             }
             return Protein;
         }
-
     }
 }

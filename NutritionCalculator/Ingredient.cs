@@ -8,34 +8,20 @@ namespace NutritionCalculator
 {
     public class Ingredient: INutritionFacts
     {
-        public Ingredient(int calories, int totalFat, int saturatedFat, int transFat, int cholestrol, int sodium, int totalCarbohydrates, int dietaryFiber, int sugars, int protein)
+        public Ingredient(int calories, int totalFat, int saturatedFat, int transFat, int cholesterol, int sodium, int totalCarbohydrates, int dietaryFiber, int sugars, int protein)
         {
-            this.calories = Calories;
-            this.totalFat = TotalFat;
-            this.saturatedFat = SaturatedFat;
-            this.cholesterol = Cholesterol;
-            this.sodium = Sodium;
-            this.totalCarbohydrates = TotalCarbohydrates;
-            this.dietaryFiber = DietaryFiber;
-            this.sugars = Sugars;
-            this.protein = Protein;
+            this.Calories = calories;
+            this.TotalFat = totalFat;
+            this.SaturatedFat = saturatedFat;
+            this.Cholesterol = cholesterol;
+            this.Sodium = sodium;
+            this.TotalCarbohydrates = totalCarbohydrates;
+            this.DietaryFiber = dietaryFiber;
+            this.Sugars = sugars;
+            this.Protein = protein;
         }
 
-        public Ingredient()
-        {
 
-        }
-
-        int calories;
-        int totalFat;
-        int saturatedFat;
-        int transFat;
-        int cholesterol;
-        int sodium;
-        int totalCarbohydrates;
-        int dietaryFiber;
-        int sugars;
-        int protein;
 
         #region MacroProperties
         public int Calories { get; set; }
@@ -53,45 +39,45 @@ namespace NutritionCalculator
         #region ReturnMacronutrients
         public int GetCalories()
         {
-            return this.calories;
+            return this.Calories;
         }
         public int GetTotalFat()
         {
-            return this.totalFat;
+            return this.TotalFat;
 
         }
         public int GetSaturatedFat()
         {
-            return this.saturatedFat;
+            return this.SaturatedFat;
 
         }
         public int GetTransFat()
         {
-            return this.transFat;
+            return this.TransFat;
         }
         public int GetCholesterol()
         {
-            return this.cholesterol;
+            return this.Cholesterol;
         }
         public int GetSodium()
         {
-            return this.sodium;
+            return this.Sodium;
         }
         public int GetTotalCarbohydrates()
         {
-            return this.totalCarbohydrates;
+            return this.TotalCarbohydrates;
         }
         public int GetDietaryFiber()
         {
-            return this.dietaryFiber;
+            return this.DietaryFiber;
         }
         public int GetSugars()
         {
-            return this.sugars;
+            return this.Sugars;
         }
         public int GetProtein()
         {
-            return this.protein;
+            return this.Protein;
         }
         #endregion
     }

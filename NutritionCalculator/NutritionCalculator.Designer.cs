@@ -31,6 +31,7 @@ namespace NutritionCalculator
         {
             this.SelectCategory = new System.Windows.Forms.ComboBox();
             this.SelectType = new System.Windows.Forms.ComboBox();
+            this.displayNutritionFacts = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // SelectCategory
@@ -38,9 +39,8 @@ namespace NutritionCalculator
             this.SelectCategory.FormattingEnabled = true;
             this.SelectCategory.Items.AddRange(new object[] {
             "Select Category",
-            "Bowls",
-            "Breakfast",
-            "Taco"});
+            "Taco",
+            "Beverage"});
             this.SelectCategory.Location = new System.Drawing.Point(12, 88);
             this.SelectCategory.Name = "SelectCategory";
             this.SelectCategory.Size = new System.Drawing.Size(121, 21);
@@ -56,11 +56,21 @@ namespace NutritionCalculator
             this.SelectType.TabIndex = 1;
             this.SelectType.SelectedIndexChanged += new System.EventHandler(this.SelectType_SelectedIndexChanged);
             // 
+            // displayNutritionFacts
+            // 
+            this.displayNutritionFacts.Location = new System.Drawing.Point(542, 38);
+            this.displayNutritionFacts.Name = "displayNutritionFacts";
+            this.displayNutritionFacts.Size = new System.Drawing.Size(211, 350);
+            this.displayNutritionFacts.TabIndex = 3;
+            this.displayNutritionFacts.Text = "";
+            this.displayNutritionFacts.TextChanged += new System.EventHandler(this.displayNutritionFacts_TextChanged);
+            // 
             // NutritionCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.displayNutritionFacts);
             this.Controls.Add(this.SelectType);
             this.Controls.Add(this.SelectCategory);
             this.Name = "NutritionCalculator";
@@ -74,6 +84,7 @@ namespace NutritionCalculator
 
         private System.Windows.Forms.ComboBox SelectCategory;
         private System.Windows.Forms.ComboBox SelectType;
+        private System.Windows.Forms.RichTextBox displayNutritionFacts;
     }
 }
 

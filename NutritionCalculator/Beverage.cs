@@ -8,9 +8,6 @@ namespace NutritionCalculator
 {
     class Beverage: INutritionFacts
     {
-        int Size { get; set; }
-
-        public int size;
         public int TOTALFAT = 0;
         public int SATURATEDFAT = 0;
         public int TRANSFAT = 0;
